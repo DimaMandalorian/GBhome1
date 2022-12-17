@@ -30,7 +30,4 @@ else if (a == 6)
 {
     WriteLine("суббота");
 }
-else if (a == 7)
-{
-    WriteLine("воскресение");
-}
+else if (a == 7) { WriteLine("воскресение"); }
