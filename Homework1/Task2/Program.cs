@@ -1,6 +1,6 @@
 ﻿using static System.Console;
 
-WriteLine("Является ли число a квадратом числа b?");
+WriteLine("Найти максимальное и минимальное из a и b ");
 Write("Введите число a: ");
 int a = int.Parse(ReadLine()!);
 Write("Введите число b: ");
