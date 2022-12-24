@@ -1,8 +1,16 @@
-﻿using static System.Console;
+﻿ using static System.Console;
 Clear();
 
-Write("Введите число четверти: ");
-int i=int.Parse(ReadLine()!);
+//Write("Введите число четверти: ");
+//int i=int.Parse(ReadLine()!);
+
+Write("Введите число четверти: "); //  Метод TryParse
+bool isParse = int.TryParse(ReadLine(),out int i);
+if(!isParse)
+{
+    WriteLine("Введено не число");
+    return;
+}
 
 switch (i)
 {
@@ -28,7 +36,7 @@ switch (i)
         }
     default:
     {
-        WriteLine("Ошибка");
+        WriteLine("Нет такой четверти");
         break;
     }    
 }
