@@ -23,15 +23,18 @@ WriteLine(number==n2? " ДА ":" Нет ");
 //     WriteLine($" {n2} не палиндром");
 // }
 
-//второй вариант не смог сообразить как к переменной  n2 приравнять
+//второй вариант 
 // using static System.Console; 
  
 // Write("Введите число: "); 
 // int n = int.Parse(ReadLine()!);
+// int num = n;
 // int n2=0;
+    
+//     Write(num % 10);
+//     while(!((num=num / 10) == 0))
+//     Write((num % 10));
+//     while(num>0)
+//     WriteLine($"{n2}");
 
-//     Write(n % 10);
-//     while(!((n=n / 10) == 0))
-//     Write((n % 10));
-
-// WriteLine(n2==n? " Нет ":" Да ");
+// WriteLine(num==n2? " да ":" нет ");
