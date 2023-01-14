@@ -1,4 +1,25 @@
-﻿Write("Input number2: " );            
-int namber2 = int.Parse(ReadLine()!);  
-int sum2 = GetSum(namber2);             
-WriteLine($"Sum number 1..A = {sum2}"); 
+﻿//Программа принимает на вход число 
+// на выходе количество цифр в числе.
+// 456 -> 3   78->2  89126 ->5
+
+using static System.Console;
+Clear();
+
+Write("Input number: " );            
+int.TryParse(ReadLine(), out int namber);
+WriteLine(NumCount(namber));
+
+
+
+
+int NumCount(int num)
+{
+    int digits = 0;
+    while(num > 0)
+    {
+        digits++;
+        num /=10;
+    }
+    return digits;
+}
+
