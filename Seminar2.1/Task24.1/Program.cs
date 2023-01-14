@@ -6,8 +6,8 @@ using static System.Console;
 Clear();
 
 Write("Input number: " );            
-int.TryParse(ReadLine(), out int namber);
-WriteLine(NumCount(namber));
+int.TryParse(ReadLine(), out int number);
+WriteLine($"Количество цифр в числе {number} -> {NumCount(number)}");
 
 
 
