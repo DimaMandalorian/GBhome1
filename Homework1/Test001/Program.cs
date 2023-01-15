@@ -1,17 +1,20 @@
-﻿using static System.Console; 
- 
-Write("Введите число: "); 
-int a = int.Parse(ReadLine()!); 
- 
-if(a<99) 
-{ 
-    WriteLine("третьей цифры нет"); 
-} 
-else if(a>999) 
-{ 
-    WriteLine((a/100)%10); 
+﻿// Программа принимает на вход два числа (А и В)
+// и возводит число А в натуральную степень В
+// используем цикл 3,5 ->2 43  2,4 ->16
+
+using static System.Console;
+Clear();
+
+Write("Input A: " ); 
+int A = int.Parse(ReadLine()!);
+Write("Input B: " );
+int B = int.Parse(ReadLine()!);
+
+
+
+int sum = A;
+for (int i = 1; i < B; i++)
+{
+    sum *= A;
 }
-else 
-{ 
-    WriteLine(a%10); 
-}
+WriteLine($"Результат -> {sum}");
