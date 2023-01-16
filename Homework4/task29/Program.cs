@@ -23,6 +23,6 @@ void PrintArray (int [] array) // что это я не понял
 {
     for (int i = 0; i < array.Length; i++) // добавляем новое число в элемент массива
     {
-        Write($"{array[i]} "); // показать в терминале
+        Write($"{array[i]}, "); // показать в терминале
     }
 }
