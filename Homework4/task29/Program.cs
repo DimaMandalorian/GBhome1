@@ -25,4 +25,6 @@ void PrintArray (int [] array) // что это я не понял
     {
         Write($"{array[i]}, "); // показать в терминале
     }
+    Write ($"{array[array.Length-1]}");
+
 }
