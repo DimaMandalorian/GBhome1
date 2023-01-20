@@ -11,14 +11,25 @@ int [] arr = GetArray(4);
 
 PrintArray(arr);
 
+int arr2 = GetSum (arr);
+WriteLine($" -> {arr2}");
 
-
-int res = 0;
-for (int i = 0; i < arr.Length; i++)
+int GetSum (int [] arr)
 {
-    if (arr[i] % 2 == 0) res++;
+    int res = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] % 2 == 0) res++;
+    }
+    return res;
+    //WriteLine($" -> {res}");
 }
-WriteLine($" -> {res}");
+// int res = 0;
+// for (int i = 0; i < arr.Length; i++)
+// {
+//     if (arr[i] % 2 == 0) res++;
+// }
+// WriteLine($" -> {res}");
 
 
 
