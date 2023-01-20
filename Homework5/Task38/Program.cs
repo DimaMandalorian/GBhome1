@@ -9,20 +9,23 @@ Clear();
 
 int [] arr = GetArray(10); 
 PrintArray(arr);
+int  arr2 = RabotaetMaxMin (arr);  
+WriteLine($" -> {arr2}");
 
 
 
-
-int min = arr[0];
-int max = arr[0];
-//foreach (var i in arr)             // не получается  foreach 
-for (int i = 1; i < arr.Length; i++)
+int RabotaetMaxMin  (int [] arr)
 {
-    max = arr[i] < max ? max:arr[i];
-    min = arr[i] > min ? min:arr[i];
+    int min = arr[0];
+    int max = arr[0];
+    //foreach (var i in arr)             // не получается  foreach совсем не выходит
+    for (int i = 1; i < arr.Length; i++)
+    {
+        max = arr[i] < max ? max:arr[i];
+        min = arr[i] > min ? min:arr[i];
+    }
+    return max - min;                          //WriteLine($" -> {max - min}");
 }
-WriteLine($" -> {max - min}");
-
 
 //for (int i = 1; i < arr.Length; i++)
 // {
@@ -59,3 +62,18 @@ void PrintArray(int[] inArray)
     }
     Write($"{inArray[inArray.Length-1]}]");
 }
+
+// int DiffMaxMin  (int [] arr)
+// {
+//     int max = arr[0];
+//     int min = max;
+    
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         if (arr[i] > max) max = arr[i];
+//         if (arr[i] < min) min = arr[i];
+//     }
+   
+//     int diff = max - min;
+//     return diff;
+// }
