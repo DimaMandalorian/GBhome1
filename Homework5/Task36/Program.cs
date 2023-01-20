@@ -9,19 +9,24 @@ Clear();
 
 int [] arr = GetArray(4); 
 PrintArray(arr);
+int arr2 = GetSum (arr);
+WriteLine($" -> {arr2}");
 
 
 
-int sum = 0;
-for (int i = 0; i < arr.Length; i++)
+int GetSum (int [] arr)  
 {
-    if ( i % 2 == 0) // положительные индексы массива
-    {      
-        sum += arr[i];   
+    int sum = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if ( i % 2 == 1)  // нечетная позиция
+        {      
+             sum += arr[i];   // сложение
+        }
     }
+    //WriteLine($" -> {sum}");
+    return sum;               
 }
-WriteLine($" -> {sum}");
-
 
 
 
