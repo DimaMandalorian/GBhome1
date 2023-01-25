@@ -9,13 +9,21 @@ using static System.Console;
 
 Clear();
 Write("Введите размер матрицы и диапазон значений через пробел: "); // вводим параметры
+//считываем параметры из сторики 
+// Массив одного типа преобразовать в другой(string[] перевести в int[])
+//int[] intParams=Array.ConvertAll(parametrs,int.Parse); //  или Convert.ToInt32
+int[] intParams=Array.ConvertAll(ReadLine()!.Split(" ",StringSplitOptions.RemoveEmptyEntries),int.Parse); 
+
+int[,]array = GetMatrixArray(intParams[0],intParams[1],intParams[2],intParams[3]); 
+                            
 // считываем параметры из сторики 
-string[] parametrs = ReadLine()!.Split(" ",StringSplitOptions.RemoveEmptyEntries); 
+//string[] parametrs = ReadLine()!.Split(" ",StringSplitOptions.RemoveEmptyEntries);
 // cоздали двумерный масив
-int[,]array = GetMatrixArray(int.Parse(parametrs[0]),int.Parse(parametrs[1]),
-                            int.Parse(parametrs[2]),int.Parse(parametrs[3])); 
-                            // количество строк, количество столбцов 
-                            // минимальное значение, максимальное значение(диапазон чисел)
+// int[,]array = GetMatrixArray(int.Parse(parametrs[0],int.Parse(parametrs[1],
+//                              int.Parse(parametrs[2],int.Parse(parametrs[3]); 
+                                // количество строк[0], количество столбцов [1]
+                            // минимальное значение[2], максимальное значение[3]
+
 PrintMatrixArray(array); // выводим матрицу в консоль, печатаем
 
 // выыодимый тип int[,] имя массива GetMatrixArray и параметры
@@ -46,4 +54,13 @@ void PrintMatrixArray (int[,] inArray) // входной параметр дву
         }
         WriteLine(); // с новой строки 
     }   
-}
+} 
+
+// массив позволяет сразу получить массив чисел из строки
+// Массив одного типа преобразовать в другой(string[] перевести в int[])
+// у класса Array есть метод какой Array.ConvertAll он позволяет преобразовать элементы 
+//одного массива в другой. На вход принимает 1 параметр (parametrs,) а 2 параметр говорит
+// какой закон применить к каждому элементу внутри первого массива (Convert.ToInt32) или 
+// (int.Parse)
+// int[] intParams=Array.ConvertAll(parametrs,Convert.ToInt32) //int.Parse
+//                 parametrs входной параметр, Convert.ToInt32 выходной параметр закон применения
