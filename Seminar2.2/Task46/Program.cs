@@ -12,7 +12,7 @@ Write("Введите размер матрицы и диапазон значе
 //считываем параметры из сторики 
 // Массив одного типа преобразовать в другой(string[] перевести в int[])
 //int[] intParams=Array.ConvertAll(parametrs,int.Parse); //  или Convert.ToInt32
-int[] intParams=Array.ConvertAll(ReadLine()!.Split(" ",StringSplitOptions.RemoveEmptyEntries),int.Parse); 
+int[] intParams=Array.ConvertAll(ReadLine()!.Split(new char[]{'\"','#',';','s'},StringSplitOptions.RemoveEmptyEntries),int.Parse); 
 
 int[,]array = GetMatrixArray(intParams[0],intParams[1],intParams[2],intParams[3]); 
                             
