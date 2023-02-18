@@ -1,4 +1,5 @@
-﻿using static System.Console;
+﻿// проверкаgjghjhskjhwdAAX`xsx
+using static System.Console;
 Clear();
 
 Write("Input A: " ); 
