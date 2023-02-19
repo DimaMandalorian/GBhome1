@@ -1,4 +1,4 @@
-﻿// проверкаgjghjhskjhwdAAX`xsx
+﻿// еще проверка отправления в гит хаб
 using static System.Console;
 Clear();
 
