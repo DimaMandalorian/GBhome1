@@ -1,4 +1,4 @@
-﻿// еще проверка отправления в гит хаб
+﻿// еще проверка 
 using static System.Console;
 Clear();
 
