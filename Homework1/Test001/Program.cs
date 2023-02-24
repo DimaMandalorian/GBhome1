@@ -1,4 +1,4 @@
-﻿// еще проверка 
+﻿// еще проверка 111
 using static System.Console;
 Clear();
 
